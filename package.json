@@ -1,0 +1,60 @@
+{
+  "name": "lisdir",
+  "version": "0.0.0",
+  "files": [
+    "build"
+  ],
+  "description": "List a directory (lisdir). Perhaps load its modules too?",
+  "main": "./build/lisdir-cjs.js",
+  "module": "./build/lisdir.mjs",
+  "types": "./build/lisdir.d.ts",
+  "repository": "https://github.com/lffg/lisdir",
+  "author": "Luiz Felipe Gonçalves <https://github.com/lffg>",
+  "license": "MIT",
+  "scripts": {
+    "format:raw": "prettier --write",
+    "format": "yarn format:raw '**/*.{js,jsx,ts,tsx,json,vue,css,scss,less,graphql,gql,md,mdx,yml,yaml}'",
+    "lint": "yarn lint:raw .",
+    "lint:fix": "yarn lint:raw --fix .",
+    "lint:raw": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "test": "jest",
+    "check:ts": "tsc --noEmit --skipLibCheck",
+    "check:all": "yarn lint && yarn check:ts && yarn test",
+    "build": "del build && rollup -c",
+    "prepublishOnly": "yarn check:all && yarn build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.11",
+    "del-cli": "^2.0.0",
+    "eslint": "6.x",
+    "eslint-config-lffg": "^9.0.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "rollup": "^1.23.1",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn check:all"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,vue,css,scss,less,graphql,gql,md,mdx,yml,yaml}": [
+      "yarn format:raw",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint:raw --ignore-pattern '!.prettierrc.js'",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
