@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list directory should be able to list the directory with recursion 1`] = `
+Array [
+  "a.txt",
+  "b.ts",
+  "c.ts",
+  "d.txt",
+  "e.ts",
+  "f.ts",
+]
+`;
+
+exports[`list directory should list the directory contents 1`] = `
+Array [
+  "a.txt",
+  "b.ts",
+  "c.ts",
+  "sub",
+]
+`;
+
+exports[`list directory should use the filter function 1`] = `
+Array [
+  "a.txt",
+  "b.ts",
+  "c.ts",
+]
+`;

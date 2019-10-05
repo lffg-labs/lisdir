@@ -3,7 +3,7 @@ import { listDirectory } from '../src/lisdir';
 
 const MOCK_PATH = join(__dirname, 'mock', 'main');
 
-describe('list directories', () => {
+describe('list directory', () => {
   it('should list the directory contents', async () => {
     const contents = await listDirectory(MOCK_PATH);
     const names = contents.map(({ name }) => name);
