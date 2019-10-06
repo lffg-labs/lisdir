@@ -7,21 +7,18 @@ Array [
       "letter": "b",
     },
     "name": "b.ts",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/b.ts",
   },
   Object {
     "module": Object {
       "letter": "c",
     },
     "name": "c.ts",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/c.ts",
   },
   Object {
     "module": Object {
       "extra": "extra",
     },
     "name": "extra.tsx",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/extra.tsx",
   },
 ]
 `;
@@ -33,35 +30,30 @@ Array [
       "letter": "b",
     },
     "name": "b.ts",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/b.ts",
   },
   Object {
     "module": Object {
       "letter": "c",
     },
     "name": "c.ts",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/c.ts",
   },
   Object {
     "module": Object {
       "extra": "extra",
     },
     "name": "extra.tsx",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/extra.tsx",
   },
   Object {
     "module": Object {
       "letter": "e",
     },
     "name": "e.ts",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/sub/e.ts",
   },
   Object {
     "module": Object {
       "letter": "f",
     },
     "name": "f.ts",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/sub/f.ts",
   },
 ]
 `;
@@ -73,7 +65,6 @@ Array [
       "extra": "extra",
     },
     "name": "extra.tsx",
-    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/extra.tsx",
   },
 ]
 `;

@@ -1,13 +1,13 @@
 import { extname } from 'path';
 import { ListDirectoryOptions, listDirectory } from './list-directory';
 
-interface ModuleEntry<T> {
+export interface ModuleEntry<T = any> {
   name: string;
   path: string;
   module: T;
 }
 
-interface ListModulesOptions extends ListDirectoryOptions {
+export interface ListModulesOptions extends ListDirectoryOptions {
   extensions: string[];
 }
 

@@ -1,30 +1,28 @@
 import { join } from 'path';
-import { listDirectory } from '../src/lisdir';
+import { listDirectory, Entry } from '../src/lisdir';
 
 const MOCK_PATH = join(__dirname, 'mock', 'main');
 
+const getData = (entries: Entry[]) => entries.map((entry) => entry.name);
+
 describe('list directory', () => {
   it('should list the directory contents', async () => {
-    const contents = await listDirectory(MOCK_PATH);
-    const names = contents.map(({ name }) => name);
-
+    const names = getData(await listDirectory(MOCK_PATH));
     expect(names).toMatchSnapshot();
   });
 
   it('should use the filter function', async () => {
-    const contents = await listDirectory(MOCK_PATH, {
-      filter: (file) => file.isFile()
-    });
-
-    const names = contents.map(({ name }) => name);
+    const names = getData(
+      await listDirectory(MOCK_PATH, {
+        filter: (file) => file.isFile()
+      })
+    );
 
     expect(names).toMatchSnapshot();
   });
 
   it('should be able to list the directory with recursion', async () => {
-    const contents = await listDirectory(MOCK_PATH, { recursive: true });
-    const names = contents.map(({ name }) => name);
-
+    const names = getData(await listDirectory(MOCK_PATH, { recursive: true }));
     expect(names).toMatchSnapshot();
   });
 });
