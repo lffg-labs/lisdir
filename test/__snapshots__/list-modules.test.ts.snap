@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list modules should list all the module of a directory 1`] = `
+Array [
+  Object {
+    "module": Object {
+      "letter": "b",
+    },
+    "name": "b.ts",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/b.ts",
+  },
+  Object {
+    "module": Object {
+      "letter": "c",
+    },
+    "name": "c.ts",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/c.ts",
+  },
+  Object {
+    "module": Object {
+      "extra": "extra",
+    },
+    "name": "extra.tsx",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/extra.tsx",
+  },
+]
+`;
+
+exports[`list modules should list all the modules (recursive) 1`] = `
+Array [
+  Object {
+    "module": Object {
+      "letter": "b",
+    },
+    "name": "b.ts",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/b.ts",
+  },
+  Object {
+    "module": Object {
+      "letter": "c",
+    },
+    "name": "c.ts",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/c.ts",
+  },
+  Object {
+    "module": Object {
+      "extra": "extra",
+    },
+    "name": "extra.tsx",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/extra.tsx",
+  },
+  Object {
+    "module": Object {
+      "letter": "e",
+    },
+    "name": "e.ts",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/sub/e.ts",
+  },
+  Object {
+    "module": Object {
+      "letter": "f",
+    },
+    "name": "f.ts",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/sub/f.ts",
+  },
+]
+`;
+
+exports[`list modules should return only \`.tsx\` files 1`] = `
+Array [
+  Object {
+    "module": Object {
+      "extra": "extra",
+    },
+    "name": "extra.tsx",
+    "path": "/Users/luiz/Desktop/lisdir/test/mock/main/extra.tsx",
+  },
+]
+`;

@@ -5,6 +5,7 @@ Array [
   "a.txt",
   "b.ts",
   "c.ts",
+  "extra.tsx",
   "d.txt",
   "e.ts",
   "f.ts",
@@ -16,6 +17,7 @@ Array [
   "a.txt",
   "b.ts",
   "c.ts",
+  "extra.tsx",
   "sub",
 ]
 `;
@@ -25,5 +27,6 @@ Array [
   "a.txt",
   "b.ts",
   "c.ts",
+  "extra.tsx",
 ]
 `;
