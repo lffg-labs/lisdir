@@ -17,7 +17,20 @@ yarn add lisdir
 
 ## Basic Usage
 
-TODO
+```ts
+import { listDirectory, listModules } from 'lisdir';
+
+const entries = await listDirectory('./some/directory', {
+  filter: (entry) => file.isFile(),
+  recursive: true
+});
+
+const modules = await listModules('./some/directory', {
+  filter: (entry) => entry.name.startsWith('foo'),
+  recursive: true,
+  extensions: ['js']
+});
+```
 
 ## Authors and License
 
